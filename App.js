@@ -5,28 +5,20 @@ import {
   View,
   Text
 } from 'react-native';
+import { Header } from './src/Component/Header';
+import styles from './src/Style/styles';
 
 export default class App extends Component{
   render(){
     return (
-      <>
-        
-      </>
+      <View style = {styles.main_container}>
+        <View style = {styles.header_container}>
+          <Header/>
+        </View>
+      </View>  
     )
   }
   
 };
 
-const styles = StyleSheet.create({
-  container : {
-    height : '10%',
-    backgroundColor : "#52667a",
-    alignContent : 'center',
-  },
-  footer_container : {
-
-    height : '7%',
-    backgroundColor : "#52667a",
-  }
-});
 
