@@ -41,5 +41,30 @@ export default StyleSheet.create({
         width: '25%',
         height: 90,
         margin : 10,    
-  }
+    },
+
+    input: {
+        marginLeft: 15,
+        height: 40,
+        borderColor: '#7a42f4',
+        borderWidth: 1,
+        width: '90%',
+        fontSize: 16
+    },
+
+    label: {
+        marginLeft: 15,
+        marginTop: 20,
+        fontSize: 16
+    },
+    inputContainer: {
+        marginTop: '20%',
+        flex: 1,
+        justifyContent: 'space-between'
+    },
+    dropdown_Style : {
+        marginLeft : 15,
+        borderColor : 'blue',
+        width : '95%'
+    },
 })
