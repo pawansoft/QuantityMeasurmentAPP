@@ -45,7 +45,7 @@ export default class UnitConversionBlock extends Component {
             var valueEntered = parseFloat(this.state.enteredValue);
 
             this.setState({
-                outputValue: parseFloat((valueEntered * this.state.lengthValues[inputUnit]) / this.state.lengthValues[outputUnit]).toFixed(2)
+                outputValue: (valueEntered * this.state.lengthValues[inputUnit]) / this.state.lengthValues[outputUnit]
             })
         }
         else if (this.props.type == 'Volume') {
@@ -54,7 +54,7 @@ export default class UnitConversionBlock extends Component {
             var valueEntered = parseFloat(this.state.enteredValue);
 
             this.setState({
-                outputValue: parseFloat((valueEntered * this.state.volumeValues[inputUnit]) / this.state.volumeValues[outputUnit]).toFixed(2)
+                outputValue: (valueEntered * this.state.volumeValues[inputUnit]) / this.state.volumeValues[outputUnit]
             })
         }
         else if (this.props.type == 'Temperature') {
@@ -74,12 +74,12 @@ export default class UnitConversionBlock extends Component {
             }
             else if (inputUnit === 'F' && outputUnit === 'C') {
                 this.setState({
-                    outputValue: parseFloat((valueEntered - 32) * (5 / 9)).toFixed(2)
+                    outputValue: (valueEntered - 32) * (5 / 9)
                 })
             }
             else if (inputUnit === 'F' && outputUnit === 'K') {
                 this.setState({
-                    outputValue: parseFloat((valueEntered - 32) * (5 / 9) + 273.15).toFixed(2)
+                    outputValue: (valueEntered - 32) * (5 / 9) + 273.15
                 })
             }
             else if (inputUnit === 'K' && outputUnit === 'C') {
@@ -89,7 +89,7 @@ export default class UnitConversionBlock extends Component {
             }
             else if (inputUnit === 'K' && outputUnit === 'F') {
                 this.setState({
-                    outputValue: parseFloat((valueEntered - 273.15) * (9 / 5) + 32).toFixed(2)
+                    outputValue: (valueEntered - 273.15) * (9 / 5) + 32
                 })
             }
             else if (inputUnit === outputUnit)
@@ -97,9 +97,9 @@ export default class UnitConversionBlock extends Component {
                     outputValue: valueEntered
                 })
         }
-        // this.setState ({
-        //     rou
-        // })
+        this.setState ({
+             outputValue : Number(Math.round(this.state.outputValue + 'e4')+'e-4')
+         })
 
     }
 

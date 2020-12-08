@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { View, ScrollView } from 'react-native';
 import Styles from '../Style/Styles';
-import { Footer } from './Footer';
 import { Header } from './Header';
 import UnitConversionBlock from './UnitConversionComponent';
 import UnitOPtion from './UnitOption';
