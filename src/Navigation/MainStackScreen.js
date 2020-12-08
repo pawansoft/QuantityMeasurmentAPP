@@ -1,25 +1,23 @@
-// import React from 'react';
-// import 'react-native-gesture-handler';
-// import { NavigationContainer } from '@react-navigation/native';
-// import { createStackNavigator } from '@react-navigation/stack'
-// import LengthScreen from '../Component/LengthScreen';
-// import UnitOption from '../Component/UnitOption';
-// import HomeScree from '../Component/HomeScreen';
+import React from 'react';
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import LengthScreen from '../Component/LengthScreen';
+import TemperatureScreen from '../Component/TemperatureScreen';
+import VolumeScreen from '../Component/VolumeUnitScreen';
 
-// const Stack = createStackNavigator();
+const Stack = createStackNavigator();
 
-// const MainStackScreen  = () => {
-//     return (
-//         <NavigationContainer>
-//             <Stack.Navigator
-//             initialRouteName = "Home"
-//             screenOptions = {{headerShown : false}}>
-//                 <Stack.Screen name = "Home" component = {HomeScree} />
-//                 <Stack.Screen name = "LengthScreen" component = {LengthScreen}/>
-//                 <Stack.Screen name = "UnitOption" component = {UnitOption}/>
-//             </Stack.Navigator>
-//         </NavigationContainer>
-//     )
-// }
+function MainStackScreen() {
+    return (
+        <NavigationContainer>
+             <Stack.Navigator initialRouteName = "Length" screenOptions = {{headerShown : false}}>
+                <Stack.Screen name = "Length" component = {LengthScreen}/>
+                <Stack.Screen name = "Temperature" component = {TemperatureScreen}/>
+                <Stack.Screen name = "Volume" component = {VolumeScreen}/>
+            </Stack.Navigator>
+        </NavigationContainer>
+    )
+}
 
-// export default MainStackScreen;
+export default MainStackScreen;

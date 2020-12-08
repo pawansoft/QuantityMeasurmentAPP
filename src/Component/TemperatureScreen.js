@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import {View, ScrollView} from 'react-native';
-import { Footer } from './Footer';
+import 'react-native-gesture-handler';
 import { Header } from './Header';
 import UnitConversionBlock from './UnitConversionComponent';
 import UnitOPtion from './UnitOption';
 
-export default class LengthScreen extends Component {
+export default class TemperatureScreen extends Component {
     constructor(props) {
         super(props)
-    }
+    } 
     
     render() {
         return (
@@ -17,11 +17,9 @@ export default class LengthScreen extends Component {
                     <Header/>
                     <UnitOPtion
                         navigation = {this.props.navigation}
-                        type = 'Length'
-                    />
-                    <UnitConversionBlock type = 'Length'/>
+                        type = 'Temperature'/>
+                    <UnitConversionBlock type = 'Temperature'/>
                 </ScrollView>
-                <Footer/>
             </View>
         )
     }

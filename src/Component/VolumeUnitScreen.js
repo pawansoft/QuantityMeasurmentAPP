@@ -1,25 +1,27 @@
-import React, { Component } from 'react';
-import {
-    ScrollView,
-    View,
-} from 'react-native';
+import React, {Component} from 'react';
+import {View, ScrollView} from 'react-native';
+import { Header } from './Header';
+import UnitConversionBlock from './UnitConversionComponent';
+import UnitOPtion from './UnitOption';
 
-import { UnitOption } from './UnitOption';
-import VolumeUnitForm from './VolumeUnitForm';
 
-export default class VolumeUnitScreen extends Component {
+export default class VolumeScreen extends Component {
+    constructor(props) {
+        super(props)
+    } 
+
     render() {
         return (
-            <View>
-                <View>
-                    <UnitOption />
-                </View>
-                <ScrollView>
-                    <View>
-                        <VolumeUnitForm />
-                    </View>
-                </ScrollView>
-            </View>
-        )
+        <View>
+            <ScrollView>
+                <Header/>
+                <UnitOPtion 
+                    navigation = {this.props.navigation}
+                    type = 'Volume'
+                />
+                <UnitConversionBlock type = 'Volume'/>
+            </ScrollView>
+        </View>
+        )   
     }
 }

@@ -5,11 +5,11 @@ import {
 } from 'react-native';
 import Styles from '../Style/Styles';
 
-export const Header = () => {
+export const Footer = () => {
     return (
-        <View style = {Styles.heading}>
-            <Text style={Styles.headBar}>
-                Welcome to Quantity Measurment
+        <View style = {Styles.footer}>
+            <Text style={Styles.footBar}>
+               Thank You For Using This App
             </Text>
         </View>
     )
