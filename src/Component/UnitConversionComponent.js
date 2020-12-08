@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput, } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
+import {UnitsAndCorrespondingValue} from '../Component/UnitsAndCorrespondingValue'
 import unitConversionBlockStyles from '../Style/unitConversionBlockStyles';
 export default class UnitConversionBlock extends Component {
     constructor(props) {
-        super(props)
-    }
-
-    state = {
-        lengthUnits: ['Milli Meter', 'Centi Meter', 'Meter', 'Kilo Meter', 'Inch', 'Foot', 'Yard'],
-        lengthValues: ['1', '10', '1000', '1000000', '25.4', '304.8', '914.4'],
-        tempertureUnits: ['Celsius', 'FahrenHeit', 'Kelvin'],
-        tempertureValues: ['C', 'F', 'K'],
-        volumeUnits: ['Milli Litre', 'Litre', 'Gallon', 'Cubic Meter', 'Cubic Centi Meter', 'Cubic Mill Miter'],
-        volumeValues: ['1', '1000', '3785', '1000000', '1.0', '0.001'],
-        selectedInputUnit: 0,
-        selectedOutputUnit: 0,
-        enteredValue: '0',
-        outputValue: '',
+        super(props)        
+        this.state = {
+            lengthUnits: UnitsAndCorrespondingValue.lengthUnits,
+            lengthValues: UnitsAndCorrespondingValue.lengthValues,
+            tempertureUnits: UnitsAndCorrespondingValue.tempertureUnits,
+            tempertureValues: UnitsAndCorrespondingValue.tempertureValues,
+            volumeUnits: UnitsAndCorrespondingValue.volumeUnits,
+            volumeValues: UnitsAndCorrespondingValue.volumeValues,
+            selectedInputUnit: 0,
+            selectedOutputUnit: 0,
+            enteredValue: '',
+            outputValue: '',
+        }                                                                                           
     }
 
     inputUnitHandler = async (selectedInputUnitType) => {
@@ -54,7 +54,7 @@ export default class UnitConversionBlock extends Component {
             var valueEntered = parseFloat(this.state.enteredValue);
 
             this.setState({
-                outputValue: parstFloat((valueEntered * this.state.volumeValues[inputUnit]) / this.state.volumeValues[outputUnit]).toFixed(2)
+                outputValue: parseFloat((valueEntered * this.state.volumeValues[inputUnit]) / this.state.volumeValues[outputUnit]).toFixed(2)
             })
         }
         else if (this.props.type == 'Temperature') {
@@ -97,7 +97,9 @@ export default class UnitConversionBlock extends Component {
                     outputValue: valueEntered
                 })
         }
-
+        // this.setState ({
+        //     rou
+        // })
 
     }
 
