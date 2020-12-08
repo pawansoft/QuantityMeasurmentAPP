@@ -15,16 +15,17 @@ const Styles = StyleSheet.create({
         marginBottom: '10%',
         width: '100%',
         textAlignVertical: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
+        fontSize: 20
     },
     footBar: {
         fontWeight: 'bold',
         width: '100%',
         textAlignVertical: 'center',
-        color :'white'
+        color: 'white'
     },
-    footer : {
-        marginTop: 100,
+    footer: {
+        marginTop: '50%',
         backgroundColor: '#446dff',
         height: 100
     }

@@ -11,10 +11,10 @@ const Stack = createStackNavigator();
 function MainStackScreen() {
     return (
         <NavigationContainer>
-             <Stack.Navigator initialRouteName = "Length" screenOptions = {{headerShown : false}}>
-                <Stack.Screen name = "Length" component = {LengthScreen}/>
-                <Stack.Screen name = "Temperature" component = {TemperatureScreen}/>
-                <Stack.Screen name = "Volume" component = {VolumeScreen}/>
+            <Stack.Navigator initialRouteName="Length" screenOptions={{ headerShown: false }}>
+                <Stack.Screen name="Length" component={LengthScreen} />
+                <Stack.Screen name="Temperature" component={TemperatureScreen} />
+                <Stack.Screen name="Volume" component={VolumeScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     )

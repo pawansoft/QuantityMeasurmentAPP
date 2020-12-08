@@ -1,8 +1,8 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const ButtonStyles = StyleSheet.create({
-    button_container :{
-        marginTop : '7%'
+    button_container: {
+        marginTop: '7%'
     },
     button_Style: {
         backgroundColor: 'white',
@@ -59,7 +59,7 @@ const ButtonStyles = StyleSheet.create({
     choose_Type: {
         fontSize: 20,
         marginLeft: 10,
-        marginBottom: 3, 
+        marginBottom: 3,
         marginTop: '10%',
         color: '#323436',
     }

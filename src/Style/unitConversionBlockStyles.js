@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const unitConversionBlockStyles = StyleSheet.create({
     container: {
@@ -8,12 +8,11 @@ const unitConversionBlockStyles = StyleSheet.create({
     from_To: {
         fontSize: 20,
         fontWeight: 'bold',
-        marginTop : 20
+        marginTop: 20
     },
     value_Box: {
         flex: 1,
     },
-
     output_box: {
         borderWidth: 1,
         marginTop: 10,
@@ -24,17 +23,17 @@ const unitConversionBlockStyles = StyleSheet.create({
         flex: 0.5,
         borderWidth: 1.5,
         marginRight: 10,
-        height : 45,
-        width :'95%',
-        borderWidth : 2,
-       
+        height: 45,
+        width: '95%',
+        borderWidth: 2,
+
     },
     text_input: {
-        fontSize : 20,
-        borderWidth : 2,
+        fontSize: 20,
+        borderWidth: 2,
         width: '95%',
         color: 'black',
-        height : 45
+        height: 45
 
     }
 })
